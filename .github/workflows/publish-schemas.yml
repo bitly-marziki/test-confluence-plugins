@@ -8,7 +8,7 @@ jobs:
       - uses: Bhacaz/docs-as-code-confluence@v1
         with:
           folder: 'schemas'
-          parent-page-id: '196891' # The confluence page id where to write the output
+          parent-page-id: '327681' # The confluence page id where to write the output
           space-id: SD
           confluence-base-url: https://marziki.atlassian.net/wiki
           username: mohamed.arziki@bit.ly
