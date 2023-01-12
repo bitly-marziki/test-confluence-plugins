@@ -5,11 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: confluence-markdown-sync
+      - uses: Bhacaz/docs-as-code-confluence@v1
         with:
-          from: './schemas/'
-          to: '196891' # The confluence page id where to write the output
-          cloud: https://marziki.atlassian.net/
-          user: mohamed.arziki@bit.ly
-          token: ${{ secrets.ATLASSIAN_TOKEN }}
+          folder: 'schemas'
+          parent-page-id: '196891' # The confluence page id where to write the output
+          space-id: SD
+          confluence-base-url: https://marziki.atlassian.net/wiki
+          username: mohamed.arziki@bit.ly
+          password: ${{ secrets.ATLASSIAN_TOKEN }}
           
