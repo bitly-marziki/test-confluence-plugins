@@ -1,0 +1,15 @@
+name: publish-schemas-to-confluence
+on: [push]
+jobs:
+  publish-schemas:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: confluence-markdown-sync
+        with:
+          from: './schemas/'
+          to: '196891' # The confluence page id where to write the output
+          cloud: https://marziki.atlassian.net/
+          user: mohamed.arziki@bit.ly
+          token: ${{ secrets.ATLASSIAN_TOKEN }}
+          
